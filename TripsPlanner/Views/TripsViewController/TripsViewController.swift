@@ -15,6 +15,7 @@ class TripsViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
         
         TripFunctions.readTrips { [weak self] in
             self?.tableView.reloadData()
@@ -28,11 +29,14 @@ extension TripsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        }
-        cell?.textLabel?.text = Data.tripModels[indexPath.row].title
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripsTableViewCell") as! TripsTableViewCell
+        cell.setup(tripModel: Data.tripModels[indexPath.row])
+        return cell
+    }
+}
+
+extension TripsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }
