@@ -18,6 +18,8 @@
 		1F4E70B02763D17600C3D613 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E70AF2763D17600C3D613 /* TripsViewController.swift */; };
 		1F6B03082764B58700535F58 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B03072764B58700535F58 /* TripsTableViewCell.swift */; };
 		1F6B030B2764B91900535F58 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B030A2764B91900535F58 /* UIViewExtensions.swift */; };
+		1F6B030E2764BE0200535F58 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B030D2764BE0200535F58 /* Theme.swift */; };
+		1F6B03102764BE2C00535F58 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F6B030F2764BE2C00535F58 /* FugazOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		1F4E70AF2763D17600C3D613 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		1F6B03072764B58700535F58 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		1F6B030A2764B91900535F58 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		1F6B030D2764BE0200535F58 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1F6B030F2764BE2C00535F58 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		1F4E708E2763C09400C3D613 /* TripsPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				1F6B030C2764BDF500535F58 /* Resources */,
 				1F6B03092764B8FA00535F58 /* Extensions */,
 				1F4E70AB2763D11E00C3D613 /* Views */,
 				1F4E70A32763C9BE00C3D613 /* Model */,
@@ -120,6 +125,15 @@
 				1F6B030A2764B91900535F58 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1F6B030C2764BDF500535F58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B030F2764BE2C00535F58 /* FugazOne-Regular.ttf */,
+				1F6B030D2764BE0200535F58 /* Theme.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +196,7 @@
 			files = (
 				1F4E709C2763C09700C3D613 /* LaunchScreen.storyboard in Resources */,
 				1F4E70AE2763D15F00C3D613 /* TripsViewController.storyboard in Resources */,
+				1F6B03102764BE2C00535F58 /* FugazOne-Regular.ttf in Resources */,
 				1F4E70992763C09700C3D613 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6B030E2764BE0200535F58 /* Theme.swift in Sources */,
 				1F4E70902763C09400C3D613 /* AppDelegate.swift in Sources */,
 				1F4E70AA2763CD3E00C3D613 /* Data.swift in Sources */,
 				1F6B030B2764B91900535F58 /* UIViewExtensions.swift in Sources */,
