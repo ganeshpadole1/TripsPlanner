@@ -20,6 +20,7 @@
 		1F6B030B2764B91900535F58 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B030A2764B91900535F58 /* UIViewExtensions.swift */; };
 		1F6B030E2764BE0200535F58 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B030D2764BE0200535F58 /* Theme.swift */; };
 		1F6B03102764BE2C00535F58 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F6B030F2764BE2C00535F58 /* FugazOne-Regular.ttf */; };
+		1F6B03122764C17D00535F58 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6B03112764C17D00535F58 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1F6B030A2764B91900535F58 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		1F6B030D2764BE0200535F58 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1F6B030F2764BE2C00535F58 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
+		1F6B03112764C17D00535F58 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				1F6B030F2764BE2C00535F58 /* FugazOne-Regular.ttf */,
 				1F6B030D2764BE0200535F58 /* Theme.swift */,
+				1F6B03112764C17D00535F58 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6B03122764C17D00535F58 /* Colors.xcassets in Resources */,
 				1F4E709C2763C09700C3D613 /* LaunchScreen.storyboard in Resources */,
 				1F4E70AE2763D15F00C3D613 /* TripsViewController.storyboard in Resources */,
 				1F6B03102764BE2C00535F58 /* FugazOne-Regular.ttf in Resources */,

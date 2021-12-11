@@ -13,6 +13,9 @@ class TripsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = Theme.backgroundColor
+        tableView.backgroundColor = .clear
 
         tableView.dataSource = self
         tableView.delegate = self
