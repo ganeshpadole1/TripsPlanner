@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hlP-GP-gxT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Trip View Controller-->
+        <scene sceneID="bB6-28-t4h">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="hlP-GP-gxT" customClass="AddTripViewController" customModule="TripsPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k9B-FD-Kwf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5d-e7-DjH" userLabel="PopupView" customClass="PopupUIView" customModule="TripsPlanner" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="374" height="170"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kpy-Bm-SrE">
+                                        <rect key="frame" x="20" y="20" width="334" height="74.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXd-Nd-NKk">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phv-db-Sy7">
+                                                <rect key="frame" x="0.0" y="40.5" width="334" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtC-Z1-DnW" customClass="AppUIButton" customModule="TripsPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="116" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vCi-2j-byM"/>
+                                            <constraint firstAttribute="width" constant="100" id="wXb-MV-by3"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="hlP-GP-gxT" eventType="touchUpInside" id="YOe-oA-vgo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvY-iU-qMB" customClass="AppUIButton" customModule="TripsPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="254" y="116" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="UqC-IR-B95"/>
+                                            <constraint firstAttribute="width" constant="100" id="eam-gy-DK9"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="hlP-GP-gxT" eventType="touchUpInside" id="ien-8N-HKG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JtC-Z1-DnW" firstAttribute="leading" secondItem="z5d-e7-DjH" secondAttribute="leading" constant="20" symbolic="YES" id="4hC-ev-xJW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kpy-Bm-SrE" secondAttribute="trailing" constant="20" id="FcP-q0-Phw"/>
+                                    <constraint firstAttribute="bottom" secondItem="WvY-iU-qMB" secondAttribute="bottom" constant="10" id="GUd-i0-fSn"/>
+                                    <constraint firstAttribute="height" constant="170" id="IP5-Gh-UKI"/>
+                                    <constraint firstItem="Kpy-Bm-SrE" firstAttribute="top" secondItem="z5d-e7-DjH" secondAttribute="top" constant="20" id="IPV-fo-mQM"/>
+                                    <constraint firstItem="Kpy-Bm-SrE" firstAttribute="leading" secondItem="z5d-e7-DjH" secondAttribute="leading" constant="20" id="JVf-uz-ola"/>
+                                    <constraint firstAttribute="trailing" secondItem="WvY-iU-qMB" secondAttribute="trailing" constant="20" symbolic="YES" id="hWs-63-43X"/>
+                                    <constraint firstAttribute="bottom" secondItem="JtC-Z1-DnW" secondAttribute="bottom" constant="10" id="rkL-VW-IIX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sgP-Cc-TeJ"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.40373341137210267" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z5d-e7-DjH" firstAttribute="top" secondItem="sgP-Cc-TeJ" secondAttribute="top" id="T3L-A3-a8T"/>
+                            <constraint firstItem="sgP-Cc-TeJ" firstAttribute="trailing" secondItem="z5d-e7-DjH" secondAttribute="trailing" constant="20" id="xIt-8B-b3u"/>
+                            <constraint firstItem="z5d-e7-DjH" firstAttribute="leading" secondItem="sgP-Cc-TeJ" secondAttribute="leading" constant="20" id="zzL-31-Bp9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="aXd-Nd-NKk" id="NXm-qc-UVA"/>
+                        <outlet property="tripTextField" destination="phv-db-Sy7" id="M37-oZ-8Kq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkg-M6-yLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966.66666666666674" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
