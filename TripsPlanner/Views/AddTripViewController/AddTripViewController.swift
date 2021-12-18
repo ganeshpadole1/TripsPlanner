@@ -25,10 +25,28 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
-        TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!))
+        
+        guard tripTextField.text != "", let newTripName = tripTextField.text else {
+            tripTextField.layer.cornerRadius = 5
+            tripTextField.layer.borderColor = UIColor.red.cgColor
+            tripTextField.layer.borderWidth = 1
+            tripTextField.placeholder = "Trip name required"
+            return
+        }
+        
+        TripFunctions.createTrip(tripModel: TripModel(title: newTripName))
         if let doneSaving = doneSaving {
             doneSaving()
         }
         dismiss(animated: true)
+    }
+}
+
+extension AddTripViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if ((textField.text?.isEmpty) != nil) {
+            textField.layer.borderColor = .none
+            textField.layer.borderWidth = .zero
+        }
     }
 }
