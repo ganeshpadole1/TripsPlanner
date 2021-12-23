@@ -27,6 +27,7 @@
 		1F873A732764FF5100791A77 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F873A722764FF5100791A77 /* AddTripViewController.swift */; };
 		1F873A762765160200791A77 /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F873A752765160200791A77 /* PopupUIView.swift */; };
 		1F873A782765186100791A77 /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F873A772765186100791A77 /* AppUIButton.swift */; };
+		1FAF920027746AB60047D815 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF91FF27746AB60047D815 /* UILabelExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1F873A722764FF5100791A77 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		1F873A752765160200791A77 /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		1F873A772765186100791A77 /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
+		1FAF91FF27746AB60047D815 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				1F6B030A2764B91900535F58 /* UIViewExtensions.swift */,
 				1F873A6B2764F8CB00791A77 /* UIButtonExtension.swift */,
 				1F873A6D2764F9D800791A77 /* FloatingActionButton.swift */,
+				1FAF91FF27746AB60047D815 /* UILabelExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				1F6B030E2764BE0200535F58 /* Theme.swift in Sources */,
 				1F873A782765186100791A77 /* AppUIButton.swift in Sources */,
+				1FAF920027746AB60047D815 /* UILabelExtensions.swift in Sources */,
 				1F873A762765160200791A77 /* PopupUIView.swift in Sources */,
 				1F873A6C2764F8CB00791A77 /* UIButtonExtension.swift in Sources */,
 				1F4E70902763C09400C3D613 /* AppDelegate.swift in Sources */,

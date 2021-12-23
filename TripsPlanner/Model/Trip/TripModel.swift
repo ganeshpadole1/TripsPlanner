@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import UIKit
 
 class TripModel {
     let id: UUID
     let title: String
+    let image: UIImage?
     
-    init(title: String) {
+    init(title: String, image: UIImage? = nil) {
         id = UUID()
         self.title = title
+        self.image = image
     }
 }

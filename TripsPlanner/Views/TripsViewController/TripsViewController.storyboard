@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripsTableViewCell" rowHeight="160" id="6jW-TC-kA4" customClass="TripsTableViewCell" customModule="TripsPlanner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripsTableViewCell" rowHeight="160" id="6jW-TC-kA4" customClass="TripsTableViewCell" customModule="TripsPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6jW-TC-kA4" id="IIr-q7-ZrM">
@@ -30,6 +30,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ze-wp-xdK">
                                                     <rect key="frame" x="20" y="11" width="374" height="138"/>
                                                     <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Kx-qB-URH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="138"/>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-Mg-1cJ">
                                                             <rect key="frame" x="10" y="39" width="354" height="60"/>
                                                             <constraints>
@@ -42,7 +45,11 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.14117647058823529" green="0.20000000000000001" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="4Kx-qB-URH" secondAttribute="bottom" id="E3x-q0-zMY"/>
+                                                        <constraint firstItem="4Kx-qB-URH" firstAttribute="top" secondItem="8ze-wp-xdK" secondAttribute="top" id="ZI8-xw-zcB"/>
+                                                        <constraint firstItem="4Kx-qB-URH" firstAttribute="leading" secondItem="8ze-wp-xdK" secondAttribute="leading" id="biF-7e-8E5"/>
                                                         <constraint firstAttribute="trailing" secondItem="CzV-Mg-1cJ" secondAttribute="trailing" constant="10" id="dRX-K1-d5c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4Kx-qB-URH" secondAttribute="trailing" id="n6D-by-iRJ"/>
                                                         <constraint firstItem="CzV-Mg-1cJ" firstAttribute="leading" secondItem="8ze-wp-xdK" secondAttribute="leading" constant="10" id="scI-8q-9qZ"/>
                                                         <constraint firstItem="CzV-Mg-1cJ" firstAttribute="centerY" secondItem="8ze-wp-xdK" secondAttribute="centerY" id="utw-s7-iMY"/>
                                                     </constraints>
@@ -58,6 +65,7 @@
                                         <connections>
                                             <outlet property="cardView" destination="8ze-wp-xdK" id="8dg-QA-Dfg"/>
                                             <outlet property="titleLabel" destination="CzV-Mg-1cJ" id="gp2-od-kRl"/>
+                                            <outlet property="tripImageView" destination="4Kx-qB-URH" id="IUT-S2-cXe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
