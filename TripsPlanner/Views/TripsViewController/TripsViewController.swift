@@ -74,4 +74,5 @@ extension TripsViewController: UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [delete])
     }
     
+    
 }
