@@ -73,4 +73,5 @@ extension TripsViewController: UITableViewDelegate {
         delete.image = UIImage(named: "delete")
         return UISwipeActionsConfiguration(actions: [delete])
     }
+    
 }
