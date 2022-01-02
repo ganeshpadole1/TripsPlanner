@@ -11,11 +11,13 @@ class TripsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: FloatingActionButton!
+    @IBOutlet weak var emptyTripLabel: UILabel!
     var tripIndexToEdit: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Trips"
         view.backgroundColor = Theme.backgroundColor
         tableView.backgroundColor = .clear
         
@@ -23,6 +25,7 @@ class TripsViewController: UIViewController {
         tableView.delegate = self
         
         TripFunctions.readTrips { [weak self] in
+            self?.checkEmptyMessage()
             self?.tableView.reloadData()
         }
         
@@ -34,9 +37,18 @@ class TripsViewController: UIViewController {
             let popup = segue.destination as! AddTripViewController
             popup.tripIndexToEdit = tripIndexToEdit
             popup.doneSaving = { [weak self] in
+                self?.checkEmptyMessage()
                 self?.tableView.reloadData()
             }
             self.tripIndexToEdit = nil
+        }
+    }
+    
+    func checkEmptyMessage() {
+        if Data.tripModels.isEmpty {
+            self.emptyTripLabel.isHidden = false
+        } else {
+            self.emptyTripLabel.isHidden = true
         }
     }
 }
@@ -70,6 +82,7 @@ extension TripsViewController: UITableViewDelegate {
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
                 TripFunctions.deleteTrip(index: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.checkEmptyMessage()
             }))
             self.present(alert, animated: true)
         }
