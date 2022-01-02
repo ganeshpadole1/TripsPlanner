@@ -16,6 +16,7 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var doneSaving: (() -> ())?
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,13 @@ class AddTripViewController: UIViewController {
         imageView.layer.cornerRadius = 10
         
         titleLabel.applyShadow()
+        
+        if let index = tripIndexToEdit {
+            titleLabel.text = "Edit trip"
+            let trip = Data.tripModels[index]
+            tripTextField.text = trip.title
+            imageView.image = trip.image
+        }
     }
     
     @IBAction func cancel(_ sender: UIButton) {
@@ -41,7 +49,12 @@ class AddTripViewController: UIViewController {
             return
         }
         
-        TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        if let index = tripIndexToEdit {
+            TripFunctions.updateTrip(at: index, title: newTripName, image: imageView.image)
+        } else {
+            TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        }
+        
         if let doneSaving = doneSaving {
             doneSaving()
         }

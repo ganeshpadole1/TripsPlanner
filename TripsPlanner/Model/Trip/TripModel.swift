@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class TripModel {
+struct TripModel {
     let id: UUID
-    let title: String
-    let image: UIImage?
+    var title: String
+    var image: UIImage?
     
     init(title: String, image: UIImage? = nil) {
         id = UUID()
