@@ -108,10 +108,66 @@
                     <connections>
                         <outlet property="addButton" destination="EVN-r5-qO8" id="qOx-ka-mhs"/>
                         <outlet property="emptyTripLabel" destination="oR3-rb-Jf3" id="kDl-VD-fcY"/>
+                        <outlet property="helpView" destination="LPQ-ea-1ac" id="baK-kI-mMH"/>
                         <outlet property="tableView" destination="rdY-PQ-74C" id="xM3-AJ-XMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="LPQ-ea-1ac">
+                    <rect key="frame" x="0.0" y="0.0" width="411" height="619"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="R45-Cv-21q">
+                        <rect key="frame" x="0.0" y="0.0" width="411" height="619"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAT-Sz-0xG" customClass="AppUIButton" customModule="TripsPlanner" customModuleProvider="target">
+                                <rect key="frame" x="16" y="535" width="379" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EMf-Yn-bCX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeHelpView:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3uX-aA-zK7"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hym-ku-8IJ">
+                                <rect key="frame" x="16" y="100" width="375" height="402"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78C-hf-C3P">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="VSf-3m-ZrW">
+                                        <rect key="frame" x="0.0" y="87" width="375" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="U6r-bV-OFw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="RY6-fH-OT7">
+                                        <rect key="frame" x="0.0" y="252" width="375" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="NeD-WR-MRr"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lAT-Sz-0xG" firstAttribute="leading" secondItem="R45-Cv-21q" secondAttribute="leading" constant="16" id="11k-7J-28y"/>
+                            <constraint firstItem="hym-ku-8IJ" firstAttribute="top" secondItem="R45-Cv-21q" secondAttribute="top" constant="100" id="IL1-dg-eg4"/>
+                            <constraint firstAttribute="trailing" secondItem="hym-ku-8IJ" secondAttribute="trailing" constant="20" id="K6a-4h-Vr0"/>
+                            <constraint firstAttribute="trailing" secondItem="lAT-Sz-0xG" secondAttribute="trailing" constant="16" id="KlW-xM-jL2"/>
+                            <constraint firstItem="hym-ku-8IJ" firstAttribute="leading" secondItem="R45-Cv-21q" secondAttribute="leading" constant="16" id="aYl-px-HxL"/>
+                            <constraint firstAttribute="bottom" secondItem="lAT-Sz-0xG" secondAttribute="bottom" constant="40" id="dDc-yA-Wua"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="1023.1884057971015" y="60.9375"/>
         </scene>
@@ -143,6 +199,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="deleteSwipe" width="330" height="135"/>
+        <image name="editSwipe" width="328" height="143"/>
         <image name="plus" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

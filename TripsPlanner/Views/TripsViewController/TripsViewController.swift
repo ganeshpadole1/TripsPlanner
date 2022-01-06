@@ -9,26 +9,26 @@ import UIKit
 
 class TripsViewController: UIViewController {
     
+    @IBOutlet var helpView: UIVisualEffectView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: FloatingActionButton!
     @IBOutlet weak var emptyTripLabel: UILabel!
     var tripIndexToEdit: Int?
+    var seenHelpView = "seenHelpView"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Trips"
+       // title = "Trips"
         view.backgroundColor = Theme.backgroundColor
         tableView.backgroundColor = .clear
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        TripFunctions.readTrips { [weak self] in
-            self?.checkEmptyMessage()
-            self?.tableView.reloadData()
+        TripFunctions.readTrips { [unowned self] in
+            self.checkForHelpView()
         }
-        
         //addButton.createFloatingActionButton()
     }
     
@@ -37,8 +37,7 @@ class TripsViewController: UIViewController {
             let popup = segue.destination as! AddTripViewController
             popup.tripIndexToEdit = tripIndexToEdit
             popup.doneSaving = { [weak self] in
-                self?.checkEmptyMessage()
-                self?.tableView.reloadData()
+                self?.checkForHelpView()
             }
             self.tripIndexToEdit = nil
         }
@@ -49,6 +48,27 @@ class TripsViewController: UIViewController {
             self.emptyTripLabel.isHidden = false
         } else {
             self.emptyTripLabel.isHidden = true
+        }
+    }
+    
+    func checkForHelpView() {
+        self.checkEmptyMessage()
+        self.tableView.reloadData()
+        
+        if !Data.tripModels.isEmpty {
+            if !(UserDefaults.standard.bool(forKey: seenHelpView)) {
+                view.addSubview(helpView)
+                helpView.frame = view.frame
+            }
+        }
+    }
+    
+    @IBAction func closeHelpView(_ sender: AppUIButton) {
+        UIView.animate(withDuration: 0.5) {
+            self.helpView.alpha = 0
+        } completion: { success in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.seenHelpView)
         }
     }
 }
