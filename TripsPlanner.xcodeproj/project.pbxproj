@@ -28,6 +28,9 @@
 		1F873A762765160200791A77 /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F873A752765160200791A77 /* PopupUIView.swift */; };
 		1F873A782765186100791A77 /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F873A772765186100791A77 /* AppUIButton.swift */; };
 		1FAF920027746AB60047D815 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF91FF27746AB60047D815 /* UILabelExtensions.swift */; };
+		307803DB2788C52500B92C0A /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307803DA2788C52500B92C0A /* DayModel.swift */; };
+		307803DD2788C62900B92C0A /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307803DC2788C62900B92C0A /* ActivityModel.swift */; };
+		307803DF2788C73800B92C0A /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307803DE2788C73800B92C0A /* ActivityType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		1F873A752765160200791A77 /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		1F873A772765186100791A77 /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
 		1FAF91FF27746AB60047D815 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		307803DA2788C52500B92C0A /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		307803DC2788C62900B92C0A /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		307803DE2788C73800B92C0A /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,10 @@
 		1F4E70A32763C9BE00C3D613 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1F4E70A92763CD3E00C3D613 /* Data.swift */,
 				1F4E70A42763C9C600C3D613 /* Trip */,
+				307803D82788C4CA00B92C0A /* Day */,
+				307803D92788C4D200B92C0A /* Activity */,
+				1F4E70A92763CD3E00C3D613 /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +182,23 @@
 				1F873A772765186100791A77 /* AppUIButton.swift */,
 			);
 			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		307803D82788C4CA00B92C0A /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				307803DA2788C52500B92C0A /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		307803D92788C4D200B92C0A /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				307803DC2788C62900B92C0A /* ActivityModel.swift */,
+				307803DE2788C73800B92C0A /* ActivityType.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,12 +283,15 @@
 				1F4E70902763C09400C3D613 /* AppDelegate.swift in Sources */,
 				1F4E70AA2763CD3E00C3D613 /* Data.swift in Sources */,
 				1F6B030B2764B91900535F58 /* UIViewExtensions.swift in Sources */,
+				307803DB2788C52500B92C0A /* DayModel.swift in Sources */,
 				1F873A732764FF5100791A77 /* AddTripViewController.swift in Sources */,
+				307803DD2788C62900B92C0A /* ActivityModel.swift in Sources */,
 				1F4E70922763C09400C3D613 /* SceneDelegate.swift in Sources */,
 				1F4E70B02763D17600C3D613 /* TripsViewController.swift in Sources */,
 				1F4E70A82763C9F100C3D613 /* TripFunctions.swift in Sources */,
 				1F6B03082764B58700535F58 /* TripsTableViewCell.swift in Sources */,
 				1F873A6E2764F9D800791A77 /* FloatingActionButton.swift in Sources */,
+				307803DF2788C73800B92C0A /* ActivityType.swift in Sources */,
 				1F4E70A62763C9DF00C3D613 /* TripModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
