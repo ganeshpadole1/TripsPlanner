@@ -114,10 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				1F4E70A92763CD3E00C3D613 /* Data.swift */,
+				30288DAC27899DDA00C059F0 /* MockData.swift */,
 				1F4E70A42763C9C600C3D613 /* Trip */,
 				307803D82788C4CA00B92C0A /* Day */,
 				307803D92788C4D200B92C0A /* Activity */,
-				30288DAC27899DDA00C059F0 /* MockData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

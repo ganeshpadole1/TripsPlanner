@@ -36,7 +36,6 @@ class MockData {
         case "April 18":
             models.append(ActivityModel(title: "SLC", subtitle: "12:25 - 13:45", activityType: ActivityType.flight, photo: nil))
             models.append(ActivityModel(title: "LAX", subtitle: "17:00 - 11:00", activityType: ActivityType.flight, photo: nil))
-            //models.append(ActivityModel(title: "LAX", subTitle: "17:00 - 11:00", activityType: ActivityType.flight))
         case "April 19":
             models.append(ActivityModel(title: "DPS", subtitle: "", activityType: ActivityType.flight))
             models.append(ActivityModel(title: "Bintang Kuta Hotel Checkin", subtitle: "Confirmation: AX76Y2", activityType: ActivityType.hotel))

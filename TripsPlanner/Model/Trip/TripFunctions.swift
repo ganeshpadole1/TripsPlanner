@@ -13,11 +13,11 @@ class TripFunctions {
     }
     
     static func readTrips(completion: @escaping () -> ()) {
-        DispatchQueue.global(qos: .userInteractive).async {
-            if Data.tripModels.isEmpty {
-              //  Data.tripModels.append(TripModel(title: "Trip to Bali!"))
-                //Data.tripModels.append(TripModel(title: "Mexico"))
-                //Data.tripModels.append(TripModel(title: "Russian Trip"))
+        // replace with real data source
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            if Data.tripModels.count == 0 {
+                Data.tripModels = MockData.createMockTripModelData()
             }
             DispatchQueue.main.async {
                 completion()
