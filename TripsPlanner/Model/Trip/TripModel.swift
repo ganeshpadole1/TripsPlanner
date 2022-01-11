@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct TripModel {
-    let id: UUID
+    var id: UUID
     var title: String
     var image: UIImage?
     var dayModels = [DayModel]()
