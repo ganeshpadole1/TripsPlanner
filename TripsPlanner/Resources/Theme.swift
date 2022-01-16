@@ -13,4 +13,6 @@ class Theme {
     static let backgroundColor = UIColor(named: "Background")
     static let tintColor = UIColor(named: "Tint")
     static let editColor = UIColor(named: "editColor")
+    static let bodyFontName = "AvenirNext-Regular"
+    static let bodyFontNameBold = "AvenirNext-Bold"
 }

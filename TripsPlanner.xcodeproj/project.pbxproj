@@ -34,6 +34,7 @@
 		307803DF2788C73800B92C0A /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307803DE2788C73800B92C0A /* ActivityType.swift */; };
 		307803E22788C8C800B92C0A /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307803E12788C8C800B92C0A /* ActivitiesViewController.storyboard */; };
 		307803E42788C8F800B92C0A /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307803E32788C8F800B92C0A /* ActivitiesViewController.swift */; };
+		30AF55B027946D1A000F0FA9 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF55AF27946D1A000F0FA9 /* HeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		307803DE2788C73800B92C0A /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
 		307803E12788C8C800B92C0A /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		307803E32788C8F800B92C0A /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		30AF55AF27946D1A000F0FA9 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			children = (
 				307803E12788C8C800B92C0A /* ActivitiesViewController.storyboard */,
 				307803E32788C8F800B92C0A /* ActivitiesViewController.swift */,
+				30AF55AF27946D1A000F0FA9 /* HeaderTableViewCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				1F4E70AA2763CD3E00C3D613 /* Data.swift in Sources */,
 				1F6B030B2764B91900535F58 /* UIViewExtensions.swift in Sources */,
 				30288DAD27899DDA00C059F0 /* MockData.swift in Sources */,
+				30AF55B027946D1A000F0FA9 /* HeaderTableViewCell.swift in Sources */,
 				307803DB2788C52500B92C0A /* DayModel.swift in Sources */,
 				1F873A732764FF5100791A77 /* AddTripViewController.swift in Sources */,
 				307803DD2788C62900B92C0A /* ActivityModel.swift in Sources */,

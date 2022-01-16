@@ -127,6 +127,7 @@ extension TripsViewController: UITableViewDelegate {
         let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
         let viewController = storyboard.instantiateInitialViewController() as! ActivitiesViewController
         viewController.tripId = trip.id
+        viewController.tripName = trip.title
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
